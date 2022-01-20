@@ -2,16 +2,20 @@
   <Topline/>
   <Navbar/>
   <router-view/>
+  
+  <Footer/>
 </template>
 
 <script>
 import Topline  from './components/Topline.vue'
 import Navbar  from './components/Navbar.vue'
+import Footer  from './components/Footer.vue'
 
 export default ({
   components: {
     Topline,
-    Navbar
+    Navbar,
+    Footer
   }
 })
 </script>
