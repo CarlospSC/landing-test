@@ -109,7 +109,7 @@ export default {
     }
 
     ul.show {
-        top: 65px;
+        top: 85px;
     }
 
     @media screen and (max-width: 952px){
@@ -123,28 +123,36 @@ export default {
     }
     @media screen and (max-width: 858px){
         .menu {
-            height: 65px;
+            justify-content: none;
+            height: 85px;
+        }
+        #logo-edutecnia {
+            height: 55px;
+            padding-left: 15px;
+            
         }
         #first {
-            
-            margin-right: 50px;
-            font-size: 8px;
+            width: 100%;
+            height: 50px;
+            margin-right: 10px;
+            font-size: 13px;
         }
         .btn-menu {
             display: inline-flex;
+
         }
         .menu-items {
             position: fixed;
-            width: 100vw;
-            height: calc(100% - 65px);
-            background: #414141;
+            width: 100%;
+            height: calc(100% - 85px);
+            background: #FFA500;
             top: -100vh;
             text-align: center;
             transition: all 0.5s;
             flex-direction: column;
         }
         .menu-items li {
-            margin: 30px 0 0 0;
+            margin: 50px 0 0 0;
             line-height: 30px;
         }
         .menu-items li:hover{
@@ -158,10 +166,7 @@ export default {
         .menu-items li a:hover {
             color: #FF0000;
         }
-        #logo-edutecnia {
-            height: 50px;
-            padding-left: 25px;
-        }
+        
 
     }
 </style>

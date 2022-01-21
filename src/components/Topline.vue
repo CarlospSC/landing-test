@@ -14,4 +14,11 @@ export default {
         width: 100%;
         background: linear-gradient(to left, #FF0000,#FFA500);
     }
+    @media screen and (max-width: 858px){
+        
+        #top-line {
+            height: 1.2vw;
+        }
+        
+    }
 </style>
