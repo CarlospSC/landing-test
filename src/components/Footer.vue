@@ -34,6 +34,8 @@ footer.pie-pagina
     div.grupo-2
         hr
         small Todos los derechos reservados - Edutecnia &copy; 2021
+        div.brand
+            img(alt="brandman" src="../assets/BRANDMAN.png" height=20)
 </template>
 
 <script>
@@ -80,12 +82,17 @@ export default {
         text-align: center;
         letter-spacing: 0px;
     }
+
+    .brand {
+        margin: 10px;
+    }
+
     @media screen and (max-width:800px) {
         .pie-pagina .grupo-1 {
-            width: 90%;
+            width: 100%;
             grid-template-columns: repeat(1, 1fr);
             grid-gap: 30px;
-            padding: 30px 80px;
+            padding: 40px 60px;
             align-items: center;
             text-align: left;
         }

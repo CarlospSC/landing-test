@@ -22,15 +22,31 @@ export default ({
 
 
 <style>
-  *, *:before, *:after {
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    box-sizing: border-box;
-  }
 
-  * {
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 1px;
-  }
+*, *:before, *:after {
+  margin: 0; padding: 0;
+  outline: none; border:none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  /*
+  letter-spacing: 1px;
+  */
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+  width: 0.7rem;
+}
+
+html::-webkit-scrollbar-track{
+  background-color: #FFCC95;   
+}
+
+html::-webkit-scrollbar-thumb{
+  background-color: #FFA500;   
+}
+
 </style>

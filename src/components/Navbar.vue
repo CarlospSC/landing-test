@@ -1,26 +1,24 @@
 <template lang="pug">
 
-nav.menu
-
-    label.logo
-        img#logo-edutecnia(alt="Logo edutecnia" src="https://i.imgur.com/yGK9smK.png")
+section.header
     
-    ul.menu-items
-        li
-            router-link(to="/")  Inicio
-        li
-            router-link(to="/registro")  Módulos
-        li
-            router-link(to="/login")  Clientes
-        li
-            router-link(to="/preguntas")  Preguntas frecuentes
+    img#logo-edutecnia(alt="Logo edutecnia" src="https://i.imgur.com/yGK9smK.png")
+
+    nav.navbar
+        a(href="#")  Inicio
+        a(href="#modulos")  Módulos
+        a(href="#clientes")  Clientes
+        a(href="#preguntas")  Preguntas Frecuentes
         
-    button.btn-gratis#first Prueba GRATIS
+    a(href="#form-prueba")
+        button.btn-gratis#first Prueba GRATIS
     
-    span.btn-menu
-        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAG9JREFUSEvtlckNwCAQA01nlEY6g8qC9rEfjigPKyBiF+CRRoYNWJSwiAuBPzMv1a46AbiJ3q+2a6aaCTVmx9kOTLQ8rtKq3Uskr7po1bNxmWpm8lvVTOiwS8/Jtfzvr7azyEzXp3Ex9T52SfX5qisn1AwfJnWg+AAAAABJRU5ErkJggg=="/>
-
+    div#btn-menu
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAH9JREFUWEft1UsKgDAMANH05npypTsXtYOGQAvTbaikLx9bLHbaYvmECVFFFFKIBCi+VQ9d9JpkfIgxEzKhLr5VDyVb5N91hchtJnREROWknaPkHPuHyufF2EtWeYbfd8qIXKGMUOUOev2Puocye4jKXRJ3yohVIYVIgOL2EAndFg4LJcntgd8AAAAASUVORK5CYII="/>
+        
 </template>
+
+_____________________________________________________________
 
 <script>
 export default {
@@ -28,145 +26,158 @@ export default {
 }
 </script>
 
+_____________________________________________________________
+
 <style>
-    .menu {
-        background-color: white;
-        height: 120px;
-        width: 100vw;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        /*
-        padding: 10vh 10vh 10vh 10vh; 
-        */
-        text-align: right;
+
+section {
+    background: black;
+    padding: 5rem 6%;
+}
+
+.header {
+    position: sticky;
+    top:0; left:0; right:0;
+    z-index: 1000;
+    background-color: #FFFFFF;
+    display: flex;    
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo-edutecnia {
+    max-height: 140px;
+    width: 25%;
+}
+
+.header .navbar a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+}
+
+/*
+.header .navbar a.router-link-exact-active {
+    color: #FF0000;
+}
+*/
+
+.header .navbar a:hover {
+    color: #FFA500;
+    transition: 0.2s;
+}
+
+.btn-gratis {
+    border: 2px solid #FFFFFF;
+    padding: 0.5rem;
+    width: auto;
+    font-size: 0.8rem;
+    border-radius: 30px;
+    cursor: pointer;
+    color: #FFFFFF;
+    background-image: linear-gradient(135deg, #FF0000, #FFA500);
+    box-shadow: 8px 8px 8px 0 gray;     
+}
+
+#first {
+    margin-left: 0rem;
+}
+
+.btn-gratis:hover {
+    background-image: linear-gradient(135deg, #FFA500, #FF0000);
+}
+
+
+#btn-menu {
+    cursor: pointer;
+    color: #000000;
+    display: none;        
+}
+
+
+/*--------------------------------------Media queries---------------------------------------------*/
+
+@media screen and (max-width: 1200px){
+    section{
+        padding:3rem 5%;
+    }
+}
+
+@media screen and (max-width: 991px){
+    section{
+        padding:3rem 2rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    section{
+        padding:1rem;
     }
 
     #logo-edutecnia {
-        height: 12vh;
-        float: left;
-        padding: 0 70px;
+        width: 40%;
     }
-
-    .menu-items {
-        display: flex;
-        list-style: none;
-        margin-right: 100px;
-        
-    }
-
-    .menu-items li {
-        
-        border-radius: 3px;
-        margin: 0 2px;
-    }
-
-    .menu-items li a {
-        
-        padding: 12px 13px;
-        display: block;
-        font-size: 15px;
-        color:black;
-        text-decoration: none;
-    }
-
-    .menu a.router-link-exact-active {
-        color: #FF0000;
-    }
-
-    .menu-items li a:hover {
-        background-color: rgba(255, 165, 0, 1);
-        transition: 0.5s;
-    }
-    
 
     .btn-gratis {
-        border: 2px solid #FFFFFF;
-        margin: 0 auto;
-        padding: 10px;
-        width: auto;
-        font-size: 16px;
-        border-radius: 25px;
-        cursor: pointer;
-        color: #FFF;
-        background-size: 300%;
-        transition: 0.5s;
-        background-image: linear-gradient(to left, #FFA500, #FF0000);
-        box-shadow: 8px 8px 8px 0 gray;
+        border: 1.5px solid #FFFFFF;
+        box-shadow: 0px 8px 8px 0 rgb(221, 221, 221);     
+    }
+
+    #btn-menu {
+        display: inline-block;
+        transition: 0.2s linear;
+    }
+
+    #btn-menu.vertical {
+        transform: rotate(90deg);
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 99%; left:0; right:0;
+        background-image: linear-gradient(to bottom, #FFA500, #FF0000);
+        padding: 2rem;
+        text-align: center;
+        flex-direction: column;
+        transition: 0.2s linear;
+        height: 110vw;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         
     }
 
-    .btn-gratis:hover {
-    background-position: right;
-    }
-    
-    .btn-menu {
-        margin-right: 30px;
-        font-size: 25px;
-        color: #FFFFFF;
-        cursor: pointer;
-        display: none;
+    .header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 
-    ul.show {
-        top: 85px;
-    }
-
-    @media screen and (max-width: 952px){
-        #logo-edutecnia {
-            height: 50px;
-            padding-left: 35px;
-        }
-        .menu-items li a {
-            font-size: 12px;
-        }
-    }
-    @media screen and (max-width: 858px){
-        .menu {
-            justify-content: none;
-            height: 85px;
-        }
-        #logo-edutecnia {
-            height: 55px;
-            padding-left: 15px;
-            
-        }
-        #first {
-            width: 100%;
-            height: 50px;
-            margin-right: 10px;
-            font-size: 13px;
-        }
-        .btn-menu {
-            display: inline-flex;
-
-        }
-        .menu-items {
-            position: fixed;
-            width: 100%;
-            height: calc(100% - 85px);
-            background: #FFA500;
-            top: -100vh;
-            text-align: center;
-            transition: all 0.5s;
-            flex-direction: column;
-        }
-        .menu-items li {
-            margin: 50px 0 0 0;
-            line-height: 30px;
-        }
-        .menu-items li:hover{
-            background: none;
-        }
-        .menu-items li a {
-            font-size: 20px;
-            color: #FFFFFF;
-            font-weight: bold;
-        }
-        .menu-items li a:hover {
-            color: #FF0000;
-        }
-        
+    .header .navbar a {
+        display: block;
+        margin: 2rem;
+        font-size: 1.8rem;
 
     }
+}
+
+@media screen and (max-width: 450px){
+
+    #logo-edutecnia {
+        width: 50%;
+    }
+
+    #first {
+        border: 1.5px solid #FFFFFF;
+        padding: 0.4rem;
+        font-size: 0.5rem;
+        box-shadow: 0px 8px 8px 0 rgb(221, 221, 221);     
+    }
+
+    .header .navbar a {
+        display: block;
+        margin: 2rem;
+        font-size: 0.7rem;
+    }
+}
+
 </style>
