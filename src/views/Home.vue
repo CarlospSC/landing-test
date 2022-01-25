@@ -33,7 +33,8 @@ div.form-contactanos
       small.msj Todo en un lugar
 
 
-
+br
+hr
 
 
 <!--SECCIÓN MÓDULOS-->
@@ -66,18 +67,21 @@ div.modulos#modulos
       img.md-6(src="../assets/icono-desempeno.png" height=80) 
 
 
+br
+hr
 
 
 
 <!--Módulo de Gestión Pedagógica de PRUEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA -->
 section.modulos-detalles-imagen-izquierda#gestion
-  h2 Modulo de 
+  h2 Módulo de 
+  h2
     b Gestión Pedagógica
   div.box-container
-    div.box
+    div.box-imagen
       img(alt="latop-gestion" src="../assets/gestion.png")
       
-    div.box
+    div.box-texto
       ul
         li Registro de Matrículas digitalizadas.
         li Ingreso de notas por nivel y asignatura.
@@ -90,16 +94,17 @@ section.modulos-detalles-imagen-izquierda#gestion
 <!--Módulo de Asistencia-->
 section.modulos-detalles-imagen-derecha#asistencia
   h2 Módulo de 
+  h2
     b Asistencia
   div.box-container
   
-    div.box
+    div.box-texto
       ul
         li Registro de asistencia en tiempo real.
         li Visualización de Asistencia, Cursos y Estudiantes de forma personalizada.
         li Sistema de interoperabilidad con SIGE, lo que permite que, una vez confirmada la asistencia del colegio esta puede ser enviada de manera directa.
 
-    div.box
+    div.box-imagen
       img(alt="latop-gestion" src="../assets/asistencia.png")
 
 
@@ -108,12 +113,13 @@ section.modulos-detalles-imagen-derecha#asistencia
 <!--Módulo de Contabilidad-->
 section.modulos-detalles-imagen-izquierda#contabilidad
   h2 Módulo de 
+  h2
     b Contabilidad
   div.box-container
-    div.box
+    div.box-imagen
       img(alt="latop-gestion" src="../assets/contabilidad.png")
       
-    div.box
+    div.box-texto
       ul
         li Registro y control de Facturas.
         li Administración de cuentas bancarias, emisión de cartolas y control de gastos.
@@ -124,16 +130,17 @@ section.modulos-detalles-imagen-izquierda#contabilidad
 <!--Módulo de Recursos Humanos-->
 section.modulos-detalles-imagen-derecha#rrhh
   h2 Módulo de 
+  h2
     b Recursos Humanos
   div.box-container
   
-    div.box
+    div.box-texto
       ul
         li Registro de funcionarios y colaboradores.
         li Administración de contratos, finiquitos, liquidaciones, entre otros.
         li Sistema que permite emitir certificados para PreviRed, Bancos y SII de forma online.
 
-    div.box
+    div.box-imagen
       img(alt="latop-gestion" src="../assets/rrhh.png")
 
 
@@ -141,12 +148,13 @@ section.modulos-detalles-imagen-derecha#rrhh
 <!--Módulo de Comunicación-->
 section.modulos-detalles-imagen-izquierda#comunicacion
   h2 Módulo de 
+  h2
     b Comunicación
   div.box-container
-    div.box
+    div.box-imagen
       img(alt="latop-gestion" src="../assets/comunicacion.png")
       
-    div.box
+    div.box-texto
       ul
         li Sistema de mensajería directa a teléfonos móviles entre escuela y apoderados.
         li Seguimiento de asistencias e información inmediata.
@@ -157,16 +165,17 @@ section.modulos-detalles-imagen-izquierda#comunicacion
 <!--Módulo de Evaluación de desempeño-->
 section.modulos-detalles-imagen-derecha#desempeno
   h2 Módulo de 
+  h2
     b Evaluación de Desempeño
   div.box-container
   
-    div.box
+    div.box-texto
       ul
         li Sistema para realizar evaluación de desempeño de funcionarios y colaboradores por áreas, equipos y jefaturas.
         li Generación de informes de evaluación.
         li Resultados concluyentes para retroalimentar la gestión de los trabajadores.
 
-    div.box
+    div.box-imagen
       img(alt="latop-gestion" src="../assets/desempeno.png")
 
 
@@ -354,7 +363,7 @@ export default {
     background: #FFFFFF;
     height: 100%;
     width: 100%;
-    padding: 60px 10px;
+    padding: 60px 10px 80px 10px;
     align-items: center;
   }
 
@@ -428,41 +437,57 @@ export default {
   }
 
   .modulos-detalles-imagen-izquierda h2 {
-    text-align: right;
+    text-align: left;
+    margin-left: 700px;
+    line-height: 30px;
   }
 
   .modulos-detalles-imagen-derecha h2 {
     text-align: left;
+    margin-left: 200px;
+    line-height: 30px;
   }
-
 
 
   .modulos-detalles-imagen-izquierda .box-container, .modulos-detalles-imagen-derecha .box-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     gap: 0;
-    padding: 0 5rem;
+    padding: 0 10rem;
   }
 
-  .modulos-detalles-imagen-izquierda .box-container .box{
-    padding: 2rem 3rem;
+  .modulos-detalles-imagen-izquierda .box-container .box-imagen{
+    padding: 0;
     text-align: left;
     background: #FFFFFF;
   }
-  .modulos-detalles-imagen-derecha .box-container .box {
-    padding: 2rem 3rem;
+  .modulos-detalles-imagen-derecha .box-container .box-imagen{
+    padding: 0;
+    text-align: left;
+    background: #F4F4F4;
+  }
+
+  .modulos-detalles-imagen-izquierda .box-container .box-texto{
+    margin-top: 30px;
+    padding: 2rem 0;
+    text-align: left;
+    background: #FFFFFF;
+  }
+  .modulos-detalles-imagen-derecha .box-container .box-texto{
+    margin-top: 30px;
+    padding: 2rem 0;
     text-align: left;
     background: #F4F4F4;
   }
 
 
-  .modulos-detalles-imagen-izquierda .box-container .box img, .modulos-detalles-imagen-derecha .box-container .box img{
+
+  .modulos-detalles-imagen-izquierda .box-container .box-imagen img, .modulos-detalles-imagen-derecha .box-container .box-imagen img{
     width: 100%;
   }
 
-  .modulos-detalles-imagen-izquierda .box-container .box ul li, .modulos-detalles-imagen-derecha .box-container .box ul li{
+  .modulos-detalles-imagen-izquierda .box-container .box-texto ul li, .modulos-detalles-imagen-derecha .box-container .box-texto ul li{
     letter-spacing: 0.5px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin-bottom: 1rem;
   }
   
@@ -643,6 +668,7 @@ export default {
 
   @media screen and (max-width: 858px){
 
+      /*MÓDULOS DETALLES*/
 
       .modulos-detalles-imagen-izquierda .box-container, .modulos-detalles-imagen-derecha .box-container {
         display: grid;
@@ -651,20 +677,39 @@ export default {
         padding: 0;
       }
 
-      .modulos-detalles-imagen-izquierda h2, .modulos-detalles-imagen-derecha h2 {
-        text-align: center;
-        font-size: 7vw;
-        letter-spacing: 1px;
-        margin-top: 30px;
+      .modulos-detalles-imagen-izquierda .box-container .box-imagen{
+        padding-bottom: 0;
+        margin-bottom: 0;
       }
 
-      .modulos-detalles-imagen-izquierda .box-container .box, .modulos-detalles-imagen-derecha .box-container .box{
+      .modulos-detalles-imagen-derecha .box-container .box-imagen{
+        padding-bottom: 0;
+        margin-bottom: 0;
+        order: 1;
+      }
+
+      .modulos-detalles-imagen-derecha .box-container .box-texto{
+        margin-top: 0;
+        order: 2;
+      }
+
+      .modulos-detalles-imagen-izquierda h2, .modulos-detalles-imagen-derecha h2 {
+        text-align: center;
+        font-size: 6vw;
+        line-height: 1px;
+        letter-spacing: 1px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 0;
+      }
+
+      .modulos-detalles-imagen-izquierda .box-container .box-texto, .modulos-detalles-imagen-derecha .box-container .box-texto{
         padding: 1rem 0.5rem;
         text-align: left;
       }
 
       
-      .modulos-detalles-imagen-izquierda .box-container .box ul li, .modulos-detalles-imagen-derecha .box-container .box ul li{
+      .modulos-detalles-imagen-izquierda .box-container .box-texto ul li, .modulos-detalles-imagen-derecha .box-container .box-texto ul li{
         letter-spacing: 0.5px;
         font-size: 0.9rem;
       }
@@ -704,17 +749,18 @@ export default {
           background: #FFFFFF;
           margin-top: 80px;
           margin-bottom: 0px;
-          padding: 60px 10px;
+          padding: 60px 10px 0px 10px;
       }
 
         .form-contactanos h1 {
-          font-size: 40px;
-          padding-bottom: 10px;
+          font-size: 30px;
+          padding-bottom: 30px;
       }
 
         .form-contactanos p {
           margin-left: 40px;
           margin-right: 40px;
+          margin-bottom: 40px;
           font-size: 22px;
           letter-spacing: 1px;
           line-height: 25px;
@@ -739,7 +785,8 @@ export default {
 
         .titulo-modulos {
           margin: 0;
-          margin-top: 20px;
+          margin-top: 60px;
+          margin-bottom: 20px;
           background: #FFFFFF;
           display: block;
           
@@ -770,6 +817,11 @@ export default {
         .modulo img {
           height: 75px;
         }
+
+
+        
+
+
 
         /*MODOS DIURNO Y NOCTURNO*/
 
