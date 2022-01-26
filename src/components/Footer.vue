@@ -14,22 +14,34 @@ footer.pie-pagina
         div.box
             h4 
                 b Módulos
-            p Gestión pedagógica
-            p Asistencia
-            p Recursos Humanos
-            p Contabilidad
-            p Evualuación de desempeño
-            p Comunicación
+            p 
+                a(href="#gestion") Gestión pedagógica
+            p 
+                a(href="#asistencia") Asistencia
+            p 
+                a(href="#rrhh") Recursos Humanos
+            p 
+                a(href="#contabilidad") Contabilidad
+            p 
+                a(href="#desempeno") Evualuación de desempeño
+            p 
+                a(href="#comunicacion") Comunicación
         div.box
             h4 
                 b Mapa del sitio
-            p Inicio
-            p Módulos
-            p Modo Diurno y Nocturno
-            p Clientes
-            p Preguntas Frecuentes
             p 
-                b Prueba GRATIS
+                a(href="#") Inicio
+            p 
+                a(href="#modulos") Módulos
+            p 
+                a(href="#modos") Modo Diurno y Nocturno
+            p 
+                a(href="#clientes") Clientes
+            p 
+                a(href="#preguntas") Preguntas Frecuentes
+            p 
+                a(href="#form-prueba")
+                    b Prueba GRATIS
 
     div.grupo-2
         hr
@@ -45,6 +57,15 @@ export default {
 </script>
 
 <style>
+
+    a {
+        text-decoration: none;
+        color:black;
+    }
+    a:hover {
+        color: #FF0000;
+    }
+
     .pie-pagina{
         width: 100%;
         background-color: #e6e6e6;

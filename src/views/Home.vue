@@ -1,17 +1,31 @@
 <template lang="pug">
 
 <!-- SECCIÓN INTRODUCTORIA-->
+div.triangulos-inicio
+  div.poligono.gris#n1
+  div.poligono.gris#n2
 
-div.box.home
-  img#laptop1(alt="Laptop screen naranja" src="../assets/laptop-orange.png")
-  h1#optimiza Optimiza tu Colegio
-  p Maneja tu establecimiento educacional de la mejor forma.   
-  
+
+
+section.home
+  div.box-container
+    div.box-laptop
+      img#laptop1(alt="Laptop screen naranja" src="../assets/laptop-orange.png")
+    div.box-titulo
+      h1#optimiza Optimiza tu Colegio
+    div.box-textomaneja
+      p Maneja tu establecimiento educacional de la mejor forma.   
+    
   div.two-buttons
     button.btn-sabermas Saber más
     a(href="#form-prueba")
       button.btn-gratis#second Pedir Prueba GRATIS
 
+
+
+div.triangulos-antes-c
+  div.poligono.naranja#n3
+  div.poligono.rojo#n4
 
 
 <!-- SECCIÓN CONTÁCTANOS-->
@@ -33,15 +47,24 @@ div.form-contactanos
       small.msj Todo en un lugar
 
 
-br
 hr
 
+div.triangulo-modulos
+  div.poligono.naranja#n5
 
 <!--SECCIÓN MÓDULOS-->
 div.titulo-modulos
   h2 Módulos
 
+
+
+<!--Triángulo-->
+
+
+
 div.modulos#modulos
+
+
   div.modulo 
     a(href="#gestion")
       img.md-1(src="../assets/icono-gestion.png" height=80)
@@ -108,6 +131,7 @@ section.modulos-detalles-imagen-derecha#asistencia
       img(alt="latop-gestion" src="../assets/asistencia.png")
 
 
+div.poligono-naranja#n6
 
 
 <!--Módulo de Contabilidad-->
@@ -143,7 +167,7 @@ section.modulos-detalles-imagen-derecha#rrhh
     div.box-imagen
       img(alt="latop-gestion" src="../assets/rrhh.png")
 
-
+div.poligono-naranja#n7
 
 <!--Módulo de Comunicación-->
 section.modulos-detalles-imagen-izquierda#comunicacion
@@ -179,8 +203,13 @@ section.modulos-detalles-imagen-derecha#desempeno
       img(alt="latop-gestion" src="../assets/desempeno.png")
 
 
+div.poligono-naranja#n8
+
+
+
+div.poligono-rojo#n9
 <!--SECCIÓN DE MODOS DIURNO Y NOCTURNO-->
-section.modos
+section.modos#modos
   h2 Una plataforma que se adapta a tus requerimientos con sus Modo Diurno y Modo Nocturno
   div.box-modos
     img#diurno(alt="Imagen de modo diurno" src="../assets/modo-diurno.png")
@@ -189,6 +218,9 @@ section.modos
 
 
 
+
+div.poligono-rojo#n10
+div.poligono-naranjo#n11
 <!-- SECCIÓN DE CLIENTES-->
 
 section.clientes#clientes
@@ -201,14 +233,16 @@ section.clientes#clientes
       img(alt="Edutecnia logo" src="../assets/Eductecnia.png" width=200)
       img(alt="Brandman logo" src="../assets/BRANDMAN.png" width=200)
 
-
+div.poligono-naranjo#n12
 
 
 <!-- SECCIÓN DE PREGUNTAS FRECUENTES -->
 
+div.poligono-naranjo#n13
+
 div.preguntas#preguntas
   h3 Preguntas Frecuentes
-  p Conoce las preguntas y respuestas más frecuentes de nuestra plataforma
+  h4 Conoce las preguntas y respuestas más frecuentes de nuestra plataforma
   div.preguntasfr
     div.pregunta-respuesta
       div.pregunta
@@ -294,6 +328,27 @@ export default {
 
 /*Estilos sección introductoria*/
 
+  #n1{
+    float: left;
+    height: 200px;
+    width: 100px;
+    background: linear-gradient(to left, #E6E6E6, #F4F4F4);
+    clip-path: polygon(0 0, 98% 45%, 100% 50%, 98% 55%, 0 100%);
+    border-radius: 10% 0 0;
+
+  }
+  #n2{
+    float: right;
+    height: 150px;
+    width: 75px;
+    background: linear-gradient(to right, #E6E6E6, #F4F4F4);
+    clip-path: polygon(0 48%, 100% 0, 100% 100%, 0 52%);
+    border-radius: 5% 0 0;
+  }
+
+
+
+
   .home {
     background: #FFFFFF;
     width: 100%;
@@ -304,6 +359,7 @@ export default {
     padding-right: 11vw;
 
   }
+
   #laptop1 {
     float: left;
     width: 65%;
@@ -356,6 +412,33 @@ export default {
     letter-spacing: 0.5px;
   }
 
+  /*Triángulo naranja n3*/
+  #n3{
+    position: relative;
+    bottom: 300px;
+    float: right;
+    height: 350px;
+    width: 175px;
+    background: #FFA500;
+    clip-path: polygon(0 48%, 100% 0, 100% 100%, 0 52%);
+    border-radius: 5% 0 0;
+  }
+
+  /*Triángulo rojo n4*/
+  #n4{
+    position: relative;
+    bottom: 100px;
+    float: left;
+    height: 350px;
+    width: 175px;
+    background: #FF0000;
+    clip-path: polygon(0 0, 100% 48%, 100% 52%, 0% 100%);
+    border-radius: 0 0 5%;
+  }
+
+
+
+
   /*Estilos sección contáctanos*/
   .form-contactanos {
     margin-top: 0px;
@@ -388,7 +471,6 @@ export default {
   }
 
   .ingresar {
-    
     padding: 13px;
     width: 10vw;
   }
@@ -397,6 +479,20 @@ export default {
   .form-contactanos .small-msjs .msj {
     color: #000000;
     font-size: 0.8rem;
+  }
+
+
+  /*Triángulo naranjo n5*/
+
+  #n5{
+    position: relative;
+    top: 70px;
+    float: right;
+    height: 100px;
+    width: 50px;
+    background: #FFA500;
+    clip-path: polygon(0 48%, 100% 0, 100% 100%, 0 52%);
+    border-radius: 5% 0 0;
   }
 
 
@@ -420,19 +516,55 @@ export default {
     padding: 0 200px;
   }
   .modulo {
-    padding-top: 2vw;
+    padding-top: 0.5vw;
   }
 
   .modulo:hover {
-    background: #FFADAD;
+    border: 1px solid red;
   }
   /*Estilos sección Gestión Pedagógica*/
 
+
+  #n6{
+    position: relative;
+    bottom: 70px;
+    float: left;
+    height: 130px;
+    width: 65px;
+    background: #FFA500;
+    clip-path: polygon(0 0, 100% 48%, 100% 52%, 0% 100%);
+    border-radius: 0 0 5%;
+  }
+
+   #n7{
+    position: relative;
+    bottom: 60px;
+    float: left;
+    height: 110px;
+    width: 55px;
+    background: #FF0000;
+    clip-path: polygon(0 0, 100% 48%, 100% 52%, 0% 100%);
+    border-radius: 0 0 5%;
+  }
+
+   #n8{
+    position: relative;
+    bottom: 70px;
+    float: left;
+    height: 130px;
+    width: 65px;
+    background: #FFA500;
+    clip-path: polygon(0 0, 100% 48%, 100% 52%, 0% 100%);
+    border-radius: 0 0 5%;
+  }
+
   .modulos-detalles-imagen-izquierda {
+    clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
     background: #FFFFFF;
   }
 
   .modulos-detalles-imagen-derecha {
+    clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
     background: #F4F4F4;
   }
 
@@ -459,6 +591,7 @@ export default {
     padding: 0;
     text-align: left;
     background: #FFFFFF;
+
   }
   .modulos-detalles-imagen-derecha .box-container .box-imagen{
     padding: 0;
@@ -493,10 +626,24 @@ export default {
   
 
   /*Estilos sección modos diurno y nocturno*/
+
+  #n9{
+    position: relative;
+    top: 0px;
+    float: right;
+    height: 150px;
+    width: 75px;
+    background: #FF0000;
+    clip-path: polygon(0 48%, 100% 0, 100% 100%, 0 52%);
+    border-radius: 5% 0 0;
+  }
+
+
+
   .modos {
     height: 100%;
     width: 100%;
-    background-image: linear-gradient(to right, #F4F4F4, #FFFFFF);
+    background: #FFFFFF;
     text-align: center;
   }
 
@@ -511,10 +658,44 @@ export default {
 
   .modos .box-modos img {
     width: 45%;
+    margin-left: 45px;
   }
 
 
   /*Estilos sección Clientes*/
+
+  #n10{
+    position: relative;
+    bottom: 75px;
+    float: right;
+    height: 150px;
+    width: 75px;
+    background: #FF0000;
+    clip-path: polygon(0 48%, 100% 0, 100% 100%, 0 52%);
+    border-radius: 5% 0 0;
+  }
+  #n11{
+    position: relative;
+    top: 0px;
+    left: 80px;
+    float: left;
+    height: 150px;
+    width: 150px;
+    background: #FA5000;
+    clip-path: polygon(0 0, 100% 0, 52% 50%, 47% 50%);
+    border-radius: 5% 0 0;
+  }
+  #n12{
+    position: relative;
+    bottom: 150px;
+    right: 80px;
+    float: right;
+    height: 150px;
+    width: 150px;
+    background: #FA5000;
+    clip-path: polygon(0 100%, 100% 100%, 52% 50%, 48% 50%);
+    border-radius: 5% 0 0;
+  }
 
   .clientes {
     width: 100%;
@@ -545,32 +726,49 @@ export default {
 
   /*Estilos sección preguntas frecuentes*/
 
+  #n13{
+    position: relative;
+    top: 60px;
+    left: 120px;
+    float: left;
+    height: 130px;
+    width: 130px;
+    background: #FA5000;
+    clip-path: polygon(0 50%, 50% 100%, 100% 50%, 50% 0);
+    border-radius: 50%;
+  }
+
+
   .preguntas {
+    padding-top: 40px; padding-bottom: 40px;
     width: 100%;
-    height: 900px;
+    height: 100%;
     background: #FFFFFF;
-    text-align: center;
     padding-top: 80px;
     
   }
   .preguntas h3 {
-    font-size: 40px;
+    font-size: 2rem;
     font-weight: bold;
+    text-align: center;
+    letter-spacing: 1.5px;
   }
+  .preguntas h4 {
+    font-size : 1.2rem;
+    text-align: center;
+  }
+
   .preguntas p {
-    font-size : 20px;
+    font-size: 20px;
   }
+
   .preguntasfr {
+    margin-left: 80px;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 60px;
+    grid-gap: 30px;
     padding: 100px 0px 35px 0px;
-    text-align: left;
-  }
-
-  .pregunta-respuesta .pregunta {
-    justify-content: left;  
   }
 
   .pregunta-respuesta .respuesta{
@@ -579,9 +777,9 @@ export default {
 
   .logo-mas {
     margin-left: 60px;
-    margin-right: 0px;
+    margin-right: 10px;
     float: left;
-    height: 20px;
+    height: 30px;
   }
 
 
@@ -668,86 +866,67 @@ export default {
 
   @media screen and (max-width: 858px){
 
-      /*MÓDULOS DETALLES*/
+      .home {
+        margin: 0 auto;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        background: #FFFFFF;
+      }
 
-      .modulos-detalles-imagen-izquierda .box-container, .modulos-detalles-imagen-derecha .box-container {
+      .home .box-container {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 0.5rem;
         padding: 0;
       }
 
-      .modulos-detalles-imagen-izquierda .box-container .box-imagen{
-        padding-bottom: 0;
-        margin-bottom: 0;
-      }
-
-      .modulos-detalles-imagen-derecha .box-container .box-imagen{
-        padding-bottom: 0;
-        margin-bottom: 0;
+      .home .box-container .box-titulo {
         order: 1;
+        width: 100%;
+        height: 100%;
       }
 
-      .modulos-detalles-imagen-derecha .box-container .box-texto{
-        margin-top: 0;
+      .home .box-container .box-titulo h1{
+        text-align: center;
+        font-size: 3.5rem;
+      }
+
+      .home .box-container .box-textomaneja {
         order: 2;
       }
 
-      .modulos-detalles-imagen-izquierda h2, .modulos-detalles-imagen-derecha h2 {
+      .home .box-container .box-textomaneja p{
         text-align: center;
-        font-size: 6vw;
-        line-height: 1px;
-        letter-spacing: 1px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        margin-left: 0;
+        font-size: 1rem;
       }
 
-      .modulos-detalles-imagen-izquierda .box-container .box-texto, .modulos-detalles-imagen-derecha .box-container .box-texto{
-        padding: 1rem 0.5rem;
-        text-align: left;
+      .home .box-container .box-laptop {
+        order: 3;
+        text-align: center;
+        align-items: center;
       }
 
-      
-      .modulos-detalles-imagen-izquierda .box-container .box-texto ul li, .modulos-detalles-imagen-derecha .box-container .box-texto ul li{
-        letter-spacing: 0.5px;
-        font-size: 0.9rem;
-      }
-
-
-      .home {
-        margin: auto;
+      #laptop1 {
         width: 100%;
       }
 
-        #laptop1 {
-          margin-top: 20px;
-          float: left;
-          width: 100%;
+      .home .two-buttons {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 0;
       }
-
-
-        h1 {
-        padding-bottom: 0;
-        font-size: 60px;
-        text-align:center;
+      
+      #n1, #n2, #n3, #n4, #n5, #n6, #n7, #n8, #n9, #n10, #n11, #n12, #n13 {
+        display:none;
       }
-
-        p {
-          font-size: 19px;
-          text-align:center;
-      }
-
-        .two-buttons {
-          margin-top: 30px;
-          text-align: center;
-      }
+      
 
 
         /*CONTÁCTANOS*/
         .form-contactanos {
           background: #FFFFFF;
-          margin-top: 80px;
+          margin-top: 0px;
           margin-bottom: 0px;
           padding: 60px 10px 0px 10px;
       }
@@ -820,6 +999,65 @@ export default {
 
 
         
+      /*MÓDULOS DETALLES*/
+        .modulos-detalles-imagen-izquierda {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+      }
+
+      .modulos-detalles-imagen-derecha {
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+      }
+
+
+      .modulos-detalles-imagen-izquierda .box-container, .modulos-detalles-imagen-derecha .box-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0.5rem;
+        padding: 0;
+        background: #FFFFFF;
+      }
+
+      .modulos-detalles-imagen-izquierda .box-container .box-imagen{
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      .modulos-detalles-imagen-derecha .box-container .box-imagen{
+        padding-bottom: 0;
+        margin-bottom: 0;
+        order: 1;
+      }
+
+      .modulos-detalles-imagen-derecha .box-container .box-texto{
+        margin-top: 0;
+        order: 2;
+      }
+
+      .modulos-detalles-imagen-izquierda h2, .modulos-detalles-imagen-derecha h2 {
+        text-align: center;
+        font-size: 6vw;
+        line-height: 1px;
+        letter-spacing: 1px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      #desempeno h2 {
+        font-size: 5vw;
+      }
+
+      .modulos-detalles-imagen-izquierda .box-container .box-texto, .modulos-detalles-imagen-derecha .box-container .box-texto{
+        padding: 1rem 0.5rem;
+        text-align: left;
+      }
+
+      
+      .modulos-detalles-imagen-izquierda .box-container .box-texto ul li, .modulos-detalles-imagen-derecha .box-container .box-texto ul li{
+        letter-spacing: 0.5px;
+        font-size: 0.9rem;
+      }
 
 
 
@@ -840,6 +1078,7 @@ export default {
 
         .modos .box-modos img {
           width: 95%;
+          margin-left: 25px;
         }
 
         #like {
@@ -879,17 +1118,21 @@ export default {
 
         .preguntas {
           width: 100%;
-          height: 550px;
-          background: #FFFFFF;
-          padding-top: 60px;
-          padding-left: 0px;
-          padding-right: 0;
-          
+          height: 100%;
+          padding-top: 80px;
+          padding-left: 10px;
+          padding-right: 10px;
         }
         .preguntas h3 {
-          font-size: 30px;
-          font-weight: bold;
-          text-align: center;
+          font-size: 1.5rem;
+          letter-spacing: 1px;
+        }
+
+        .preguntas h4 {
+          margin-right: 10px;
+          margin-left: 10px;
+          font-size : 1rem;
+          letter-spacing: 1px;
         }
         .preguntas p {
           margin-right: 10px;
@@ -898,20 +1141,24 @@ export default {
         }
 
         .preguntasfr {
+          margin-left: 20px;
+          text-align: left;
           width: 100%;
+          height: 100%;
           display: grid;
           grid-template-columns: repeat(1, 1fr);
           grid-gap: 5px;
           padding: 35px 0px;
-          text-align: left;
-          background: #FFFFFF;
-        }
-        .preguntasfr .pregunta {
-          text-align: center;
         }
 
+        .pregunta-respuesta .respuesta {
+          margin-left: 0;
+        }
+
+
         .logo-mas {
-          float: left;
+          margin-left: 25px;
+          margin-right: 0px;
           height: 20px;
         }
 
