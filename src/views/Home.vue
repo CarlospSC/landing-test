@@ -17,7 +17,8 @@ section.home
       p Maneja tu establecimiento educacional de la mejor forma.   
     
   div.two-buttons
-    button.btn-sabermas Saber más
+    a(href="#quienes-somos")
+      button.btn-sabermas Saber más
     a(href="#form-prueba")
       button.btn-gratis#second Pedir Prueba GRATIS
 
@@ -225,15 +226,13 @@ div.poligono-naranjo#n11
 
 section.clientes#clientes
   h2 Nuestros clientes
-  p Conoce algunos de nuestros clientes que ya utilizan la plataforma
-  div.clientes-logos
-    div.dos-clientes
-      img(alt="Edutecnia logo" src="../assets/Eductecnia.png" width=200)
-      img(alt="Brandman logo" src="../assets/BRANDMAN.png" width=200)
-      img(alt="Edutecnia logo" src="../assets/Eductecnia.png" width=200)
-      img(alt="Brandman logo" src="../assets/BRANDMAN.png" width=200)
+  p Conoce algunos de nuestros clientes que ya utilizan la plataforma:
+  Clientcarousel
 
 div.poligono-naranjo#n12
+
+<!-- SECCIÓN CAROUSEL -->
+
 
 
 <!-- SECCIÓN DE PREGUNTAS FRECUENTES -->
@@ -312,14 +311,36 @@ div#form-prueba
 
 
 
+<!--Sección quiénes somos-->
+section.quienes-somos#quienes-somos
+  div.quienes
+    h2 Quiénes somos
+    div.historia
+      h3 Historia 
+        <span class="iconify" data-icon="el:book" style="color: red;"></span>
+      p Frente a las diversas demandas que genera a las intituciones educativas la política educativa que tenemos en la actualidad, nos reunimos un grupo de <span>profesionales muy cercanos al mundo de la educación</span> con la intención de presentar una <span>propuesta seria, innovadora</span> y con un profundo interés de ser un <span>aporte real para los colegios</span> que decidan contar con nuestros servicios de capacitación.
+    div.vision
+      h3 Visión 
+        <span class="iconify" data-icon="emojione-monotone:eye" style="color:#FF7816;"></span> 
+      p Impulsar un proyecto que nos permita ser identificados como una organización <span>líder, innovadora y creativa</span> en el área de la <span>capacitación y el perfeccionamiento para instituciones educativas</span>.
+    div.mision
+      h3 Misión 
+        //-
+          <span class="iconify" data-icon="bi:list-check" style="color: red;"></span>
+        <span class="iconify" data-icon="noto:man-superhero-light-skin-tone" style="color: red;"></span>
+      p Entregar las herramientas necesarias a <span>docentes, asistentes de la educación y directivos</span> de las instituciones educativas en las <span>diversas áreas de gestión</span>, con el objetivo de que permitan la instalación de <span>mejoras en las prácticas y procesos</span> de las organizaciones.
+
+
 </template>
 
 <script>
 
+import Clientcarousel from '../components/Clientcarousel.vue'
+
 export default {
   name: 'Home',
   components: {
-    
+    Clientcarousel
   }
 }
 </script>
@@ -327,6 +348,7 @@ export default {
 <style scoped>
 
 /*Estilos sección introductoria*/
+  
 
   #n1{
     float: left;
@@ -402,7 +424,8 @@ export default {
   }
 
   .btn-sabermas:hover {
-    background: #FF0000;
+    border: 2px solid red;
+    color: red;
     transition: 0.5s;
   }
   
@@ -520,7 +543,7 @@ export default {
   }
 
   .modulo:hover {
-    border: 1px solid red;
+    border: 3px solid red;
   }
   /*Estilos sección Gestión Pedagógica*/
 
@@ -700,29 +723,25 @@ export default {
   .clientes {
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(to right, #FFFFFF, #F4F4F4);
+    background: #F4F4F4;
     text-align: center;
   }
 
   .clientes h2 {
-    font-size: 2rem;
+
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 2.2rem;
     letter-spacing: 1.5px;
     font-weight: bold;
+    
   }
 
   .clientes p {
+    padding: 1rem;
     font-size: 1.2rem;
   }
 
-  .clientes .clientes-logos {
-    margin-left: 40px;
-    margin-right: 40px;
-  }
-  .clientes .clientes-logos .dos-clientes img {
-    padding: 10px;
-    margin: 40px 20px 0 20px;
-    width: 20%;
-  }
 
   /*Estilos sección preguntas frecuentes*/
 
@@ -850,6 +869,66 @@ export default {
     font-size: 14px;
     margin-left: 5px;
   }
+
+
+  /*Estilos sección quiénes somos*/
+    .quienes-somos {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    background: #F4F4F4;
+    padding: 6rem 2rem 4rem 2rem;
+    display: flex;
+  }
+
+  .quienes-somos h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+  }
+
+  .quienes-somos .quienes .historia, .quienes-somos .quienes .vision, .quienes-somos .quienes .mision{
+    box-sizing: border-box;
+    padding: 3rem;
+    align-items: center;
+    height: 100%;
+    width: 33.3%;
+    display: block;
+    float: left;
+  }
+
+
+  .quienes-somos .quienes .historia h3, .quienes-somos .quienes .vision h3, .quienes-somos .quienes .mision h3{
+    color: red;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    letter-spacing: 1.5px;
+    font-weight: bold;
+  }
+
+  .quienes-somos .quienes .vision h3 {
+    color:#FF7816;
+  }
+
+  .quienes-somos .quienes .historia p, .quienes-somos .quienes .vision p, .quienes-somos .quienes .mision p{
+    font-size: 1.2rem;
+    text-align: left;
+    letter-spacing: 1px;
+  }  
+
+  .quienes-somos .quienes .historia p span, .quienes-somos .quienes .mision p span {
+    font-weight: bold;
+    color:#FF7816;
+  }
+
+  .quienes-somos .quienes .vision p span {
+    color: red;
+    font-weight: bold;
+  }
+
 
   /*-------------------Media queries-------------------*/
 
@@ -1199,7 +1278,40 @@ export default {
           margin-bottom: 20px;
         }
 
+        /*Sección quiénes somos*/
+        .quienes-somos {
+          box-sizing: border-box;
+          padding: 4rem 0 8rem 0;
+        }
+        
+        .quienes-somos h2 {
+          box-sizing: border-box;
+        }
 
+        .quienes-somos .quienes .historia{
+          padding: 0 2rem 0 2rem;
+          width: 100%;
+          height: 40%;
+        }
+
+        .quienes-somos .quienes .vision {
+          padding: 0 2rem 0 2rem;
+          width: 100%;
+          height: 30%;
+        }
+
+        .quienes-somos .quienes .mision {
+          padding: 0 2rem 0 2rem;
+          width: 100%;
+          height: 30%;
+        }
+
+        .quienes-somos .quienes .historia p, .quienes-somos .quienes .vision p, .quienes-somos .quienes .mision p{
+          font-size: 0.9rem;
+          text-align: left;
+          letter-spacing: 1px;
+        }  
+        
     }
 
 </style>

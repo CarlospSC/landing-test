@@ -96,7 +96,7 @@ export default {
     }
     .pie-pagina .grupo-1 .box p{
         margin-bottom: 5px;
-        font-size: 12px;
+        font-size: 0.9rem;
     }
     .pie-pagina .grupo-2{
         padding: 15px 10px;

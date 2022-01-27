@@ -10,7 +10,7 @@ section.header
         a(href="#clientes")  Clientes
         a(href="#preguntas")  Preguntas Frecuentes
         
-    a(href="#form-prueba")
+    a(href="https://portal.edutecnia.cl/login" target="_blank")
         button.btn-gratis#first Prueba GRATIS
     
     div#btn-menu
@@ -55,8 +55,8 @@ section {
 .header .navbar a {
     color: #000000;
     text-decoration: none;
-    font-size: 0.8rem;
-    margin-left: 1rem;
+    font-size: 1.2rem;
+    margin-left: 2rem;
 }
 
 /*
@@ -84,6 +84,7 @@ section {
 
 #first {
     margin-left: 0rem;
+    font-size: 1.3rem;
 }
 
 .btn-gratis:hover {
@@ -104,11 +105,26 @@ section {
     section{
         padding:3rem 5%;
     }
+    .header .navbar a {
+        font-size: 1.1rem;
+        margin-left: 1.5rem;
+    }
+    #first {
+        font-size: 1.2rem; 
+    }
 }
 
 @media screen and (max-width: 991px){
     section{
         padding:3rem 2rem;
+    }
+    .header .navbar a {
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+    #first {
+        font-size: 1.1rem; 
+        margin-left: 2rem;
     }
 }
 
@@ -124,6 +140,10 @@ section {
     .btn-gratis {
         border: 1.5px solid #FFFFFF;
         box-shadow: 0px 8px 8px 0 rgb(221, 221, 221);     
+    }
+
+    #first {
+        margin-left: 0;
     }
 
     #btn-menu {
