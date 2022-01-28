@@ -1,7 +1,6 @@
 <template lang="pug">
-
 section.header
-    
+        
     img#logo-edutecnia(alt="Logo edutecnia" src="https://i.imgur.com/yGK9smK.png")
 
     nav.navbar
@@ -21,7 +20,13 @@ section.header
 _____________________________________________________________
 
 <script>
+
+
+
 export default {
+    components: {
+        
+    }
 
 }
 </script>
@@ -45,6 +50,7 @@ section {
     padding-bottom: 0.5rem;
     align-items: center;
     justify-content: space-between;
+    box-shadow: lightslategray;
 }
 
 #logo-edutecnia {

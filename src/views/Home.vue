@@ -245,29 +245,25 @@ div.preguntas#preguntas
   div.preguntasfr
     div.pregunta-respuesta
       div.pregunta
-        img.logo-mas(alt="logo de signo más" src = "../assets/icono-mas.png")
-        p ¿Pregunta Frecuente número 1?
+        <p> <img class="logo-mas" alt="logo de signo más" src = "../assets/icono-mas.png"> ¿Pregunta Frecuente número 1? </p>
       div.respuesta
         p Pregunta Frecuente número 1
 
     div.pregunta-respuesta
       div.pregunta
-        img.logo-mas(alt="logo de signo más" src = "../assets/icono-mas.png")
-        p ¿Pregunta Frecuente número 2?
+        <p> <img class="logo-mas" alt="logo de signo más" src = "../assets/icono-mas.png"> ¿Pregunta Frecuente número 2? </p>
       div.respuesta
         p Pregunta Frecuente número 2
         
     div.pregunta-respuesta
       div.pregunta
-        img.logo-mas(alt="logo de signo más" src = "../assets/icono-mas.png")
-        p ¿Pregunta Frecuente número 3?
+        <p> <img class="logo-mas" alt="logo de signo más" src = "../assets/icono-mas.png"> ¿Pregunta Frecuente número 3? </p>
       div.respuesta
         p Pregunta Frecuente número 3
         
     div.pregunta-respuesta
       div.pregunta
-        img.logo-mas(alt="logo de signo más" src = "../assets/icono-mas.png")
-        p ¿Pregunta Frecuente número 4?
+        <p> <img class="logo-mas" alt="logo de signo más" src = "../assets/icono-mas.png"> ¿Pregunta Frecuente número 4? </p>
       div.respuesta
         p Pregunta Frecuente número 4
         
@@ -349,6 +345,9 @@ export default {
 
 /*Estilos sección introductoria*/
   
+  html {
+  overflow-x: hidden;
+  }
 
   #n1{
     float: left;
@@ -611,24 +610,28 @@ export default {
   }
 
   .modulos-detalles-imagen-izquierda .box-container .box-imagen{
+    width: 50%;
     padding: 0;
     text-align: left;
     background: #FFFFFF;
 
   }
   .modulos-detalles-imagen-derecha .box-container .box-imagen{
+    width: 50%;
     padding: 0;
     text-align: left;
     background: #F4F4F4;
   }
 
   .modulos-detalles-imagen-izquierda .box-container .box-texto{
+    width: 50%;
     margin-top: 30px;
     padding: 2rem 0;
     text-align: left;
     background: #FFFFFF;
   }
   .modulos-detalles-imagen-derecha .box-container .box-texto{
+    width: 50%;
     margin-top: 30px;
     padding: 2rem 0;
     text-align: left;
@@ -759,7 +762,7 @@ export default {
 
 
   .preguntas {
-    padding-top: 40px; padding-bottom: 40px;
+    padding-bottom: 40px;
     width: 100%;
     height: 100%;
     background: #FFFFFF;
@@ -782,21 +785,27 @@ export default {
   }
 
   .preguntasfr {
-    margin-left: 80px;
+    box-sizing: border-box;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
     padding: 100px 0px 35px 0px;
+    align-items: center;
   }
 
+  .pregunta-respuesta {
+    text-align: center;
+  }
+
+
   .pregunta-respuesta .respuesta{
-    margin-left: 60px;
+    margin-left: 40px;
   }
 
   .logo-mas {
-    margin-left: 60px;
-    margin-right: 10px;
+    margin-left: 120px;
+    margin-right: 0px;
     float: left;
     height: 30px;
   }
@@ -1097,20 +1106,29 @@ export default {
       }
 
       .modulos-detalles-imagen-izquierda .box-container .box-imagen{
+        width:100%;
         padding-bottom: 0;
         margin-bottom: 0;
       }
 
+      .modulos-detalles-imagen-izquierda .box-container .box-texto{
+        width: 100%;
+      }
+
       .modulos-detalles-imagen-derecha .box-container .box-imagen{
+        width: 100%;
         padding-bottom: 0;
         margin-bottom: 0;
         order: 1;
       }
 
       .modulos-detalles-imagen-derecha .box-container .box-texto{
+        width:100%;
         margin-top: 0;
         order: 2;
       }
+
+
 
       .modulos-detalles-imagen-izquierda h2, .modulos-detalles-imagen-derecha h2 {
         text-align: center;
@@ -1220,7 +1238,7 @@ export default {
         }
 
         .preguntasfr {
-          margin-left: 20px;
+          box-sizing: border-box;
           text-align: left;
           width: 100%;
           height: 100%;
